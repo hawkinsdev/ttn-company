@@ -6,6 +6,7 @@ import { PrivateRoute } from "./utils/PrivateRoute";
 //Components
 import { App } from "./App";
 import { Home } from "./pages/Home";
+import { Incidents } from "./pages/Incidents"; 
 
 const root = createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <Routes>
       <Route path="/" element={<PrivateRoute />}>
         <Route exact path="/home" element={<Home />} />
+        <Route path="/incidents" element={<Incidents />} />
       </Route>
       <Route path="/login" element={<App />} />
     </Routes>

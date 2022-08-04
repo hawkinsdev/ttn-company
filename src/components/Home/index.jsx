@@ -29,7 +29,7 @@ export const HomeV = ({
     }
 }) => {
     return(
-       <ContentMain>
+        <ContentMain>
             <TitleHeader>Dashboard</TitleHeader>
             <BodyMain>
                 <Card>

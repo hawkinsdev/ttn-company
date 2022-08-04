@@ -8,11 +8,13 @@ import IconIncidents from '../../assets/icons/incidents.png'
 import IconLogout from '../../assets/icons/logout.png'
 import IconAccount from '../../assets/icons/account.png'
 import IconNotification from '../../assets/icons/notification.png'
+import { Link } from 'react-router-dom'
 
-export const LayoutV = ({ children, Logout }) => {
+export const LayoutV = ({ children, Logout, userInfo }) => {
     return (
         <Container>
             <Nav>
+                {userInfo?.name}
                 <IconNav src={IconNotification} width={20} height={20}/>
                 <IconNav src={IconAccount}/>
             </Nav>
@@ -22,8 +24,12 @@ export const LayoutV = ({ children, Logout }) => {
                         <IconButton src={IconReact}/>
                     </Top>
                     <Middle>
-                        <IconButton src={IconDashboard}/>
-                        <IconButton src={IconIncidents}/>
+                        <Link to={'/home'}>
+                            <IconButton src={IconDashboard}/>
+                        </Link>
+                        <Link to={'/incidents'}>
+                            <IconButton src={IconIncidents}/>
+                        </Link>
                     </Middle>
                     <Bottom>
                         <IconButton src={IconLogout} onClick={() => Logout()}/>

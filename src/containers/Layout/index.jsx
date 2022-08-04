@@ -8,10 +8,12 @@ export const LayoutC = ({children}) => {
         window.location.reload(true);
     }
 
-    
+    const userInfo = JSON.parse(localStorage.getItem('signin'))
+
     return (
         <LayoutV
             Logout={Logout}
+            userInfo={userInfo}
         >
             {children}
         </LayoutV>

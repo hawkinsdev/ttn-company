@@ -10,7 +10,7 @@ export const Nav = styled.nav`
     justify-content: right;
     width:100%;
     height: 8%;
-    color: #FFFFFF;
+    color: #032233;
     border-bottom: solid 0px lightgrey;
     box-shadow: 0 0 18px #1717193b;
     position: absolute;
@@ -57,6 +57,7 @@ export const Top = styled.div`
 `
 
 export const Middle = styled.div`
+margin-left: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;

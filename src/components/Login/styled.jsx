@@ -8,8 +8,10 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     background-color:#e3ebf3;
-    @media (max-width: 1024px) {
-        background-image: none;  
+    @media (max-width: 320px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `
 export const SLogin = styled.div`

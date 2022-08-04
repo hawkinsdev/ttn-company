@@ -1,9 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {HomeV} from '../../components/Home/'
 
 export const HomeC = () => {
-    const userInfo = JSON.parse(localStorage.getItem('signin'))
     const plans = [
         { active: true, color: '#F97B92', title: 'Operacional', summary: 'Riesgos identificados', value: 35},
         { color: '#AC6CED', title: 'Actuarial', summary: 'Riesgos identificados', value: 55},
