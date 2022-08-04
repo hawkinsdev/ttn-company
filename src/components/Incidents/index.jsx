@@ -17,15 +17,18 @@ export const IncidentsV = ({
     data: {
         Incidents,
         showModal,
-        showRegister
+        showRegister,
+        values
     },
     setShowModal,
-    setShowRegister
+    setShowRegister,
+    handleChange,
+    createIncident
 }) => {
     const [showAcordeon, setShowAcordeon ] = useState(false)
     return (
         <ContentMain>
-            {showRegister ? <RegisterIncident/>
+            {showRegister ? <RegisterIncident handleChange={handleChange} values={values} createIncident={createIncident}/>
             :<>
                 {showModal && <ModalDetail setShowModal={setShowModal} />}
                 <TitleHeader>Incidentes</TitleHeader>
@@ -101,5 +104,7 @@ export const IncidentsV = ({
 IncidentsV.propTypes = {
     data: PropTypes.object,
     setShowModal: PropTypes.func,
-    setShowRegister: PropTypes.func
+    setShowRegister: PropTypes.func,
+    handleChange: PropTypes.func,
+    createIncident: PropTypes.func
 }

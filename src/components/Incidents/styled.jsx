@@ -7,18 +7,17 @@ export const ContentMain = styled.div`
     margin-top: 100px;
     margin-left: 50px;
 `
-export const TitleHeader = styled.h1`
-    margin-top: 50px;
-    width: 183px;
+export const TitleHeader = styled.div`   
+    display: flex;
+    align-items: center;
+    justify-content: ${({justifyContent}) => justifyContent ? justifyContent : 'space-between'};
+    width: 100%;
     height: 52px;
-    bottom: 672px;
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 52px;
-    display: flex;
-    align-items: flex-end;
     color: #293253;
 `
 export const Card = styled.div`
@@ -47,6 +46,7 @@ export const ButtonAdd = styled.div`
 export const Icon = styled.img`
     width:  ${({width}) =>  width ? width : '15px'};
     height: ${({height}) =>  height ? height : '15px'};
+    cursor: pointer;
     :hover {
         color: #293253;
     }
@@ -187,17 +187,17 @@ export const ModalInput = styled.input`
     width: 48%;
     height: 43px;
     background: #FFFFFF;
-    border: 0.5px solid #6A828F;
+    border: 0.5px solid  #D9DDDF;
     border-radius: 8px;
     ::placeholder{
         color: #B4BBBE;
     }
 `
 export const ModalSelect = styled.select`
-    width: 100%;
+    width: ${({width}) => width ? width : '100%'};
     height: 43px;
     background: #FFFFFF;
-    border: 0.5px solid #6A828F;
+    border: 0.5px solid  #D9DDDF;
     border-radius: 8px;
     color: #B4BBBE;
 `
@@ -205,9 +205,9 @@ export const ModalOption = styled.option``
 
 export const ModalTextArea = styled.textarea`
     width: 100%;
-    height: 164px;
+    height: 120px;
     background: #FFFFFF;
-    border: 0.5px solid #6A828F;
+    border: 0.5px solid  #D9DDDF;
     border-radius: 8px;
     ::placeholder{
         color: #B4BBBE;
@@ -232,9 +232,50 @@ export const ModalButton = styled.button`
 //RegisterIncident
 
 export const RegisterContentMain = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 90%;
     height: 100%;
-    background: #ffffff;
-    margin-top: 100px;
+    margin-top: 20px;
     margin-left: 50px;
 `
+
+export const CardStepper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 112px;
+    background: #FAFAFA;
+    box-shadow: 6px 6px 14px -6px rgba(0, 63, 128, 0.12), 0px 8px 32px -4px rgba(0, 63, 128, 0.1);
+    border-radius: 14px;
+`
+
+export const CardStepContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+    width: 80%;
+    height: 55%;
+    background: #FFFFFF;
+    box-shadow: 6px 6px 14px -6px rgba(0, 63, 128, 0.12), 0px 8px 32px -4px rgba(0, 63, 128, 0.1);
+    border-radius: 14px;
+`
+export const AlingButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+`
+export const FormGroup = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+`
+
